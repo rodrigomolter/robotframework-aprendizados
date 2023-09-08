@@ -1,0 +1,9 @@
+*.log
+*.html
+*.xml
+__pycache__/
+
+Resultados/
+Results/
+robot-avancado/
+my_user_and_passwords.robot
