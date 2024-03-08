@@ -4,14 +4,14 @@ Neste repositório, compartilho os aprendizados e exemplos adquiridos durante do
 
 ## Instalando Robot Framework 🤖
 Para rodar as suites de testes é necessário ter o Robot Framework instalado.
-O método recomendado de instalação é utilizando o [pip](http://pip-installer.org/)
+O método recomendado de instalação é utilizando o [pip](http://pip-installer.org/).
 ```
 pip install --upgrade robotframework-seleniumlibrary
 ```
-Rodando esse comando instalara também a última versão do Robot Framework e da [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html), que também será utilizada neste projeto.
+Rodando esse comando irá instalar também a última versão do Robot Framework e da [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html), que também será utilizada neste projeto.
 
 
-Outra biblioteca utilizando é a [FakerLibrary](https://github.com/MarketSquare/robotframework-faker), utilizada para a geração de dados aleatórios na execução dos testes
+Outra biblioteca utilizada é a [FakerLibrary](https://github.com/MarketSquare/robotframework-faker), utilizada para a geração de dados aleatórios na execução dos testes.
 ```
 pip install robotframework-faker
 ```
@@ -31,32 +31,32 @@ Geralmente ela fica em `C:\Users\User\AppData\Local\Programs\Python\Python39\Scr
 
 Caso não tenha entendido ou conseguido acompanhar alguma etapa, recomendo a [playlist Kickoff da Bianca Campos no Youtube](https://www.youtube.com/watch?v=BhtyZISTFRs)
 
-## Rodando os testes
-Os testes podem ser executados pelo comando
+## Executando os testes
+Os testes podem ser executados pelo comando:
 ```
 robot nomeDoArquivo.robot
 ```
-Exemplo, da pasta `WebTesting`
+Exemplo, da pasta `WebTesting`:
 ```
 robot youtube.robot
 ```
 
-### Rodando em um navegador diferente
+### Executando em um navegador diferente
 O navegador utilizado é controlado pela variável ${BROWSER}.
 ```
 robot BROWSER:chrome youtube.robot
 ```
-Onde, -v é o parâmetro que indica que será atribuído o valor (chrome) à variável ${BROWSER} do meu teste. No meu exemplo, a variável está definida como default o valor firefox, mas rodando por este comando, o navegador utilizado será o chrome.
+Onde, -v é o parâmetro que indica que será atribuído o valor (chrome) à variável (${BROWSER}) do meu teste. No meu exemplo, a variável está definida como default o valor firefox, mas rodando por este comando, o navegador utilizado será o chrome.
 
 ###  Especificar o diretório dos results da execução
 ```
-robot -d ./MeusResultados nomeDoArquivo.robot
+robot -d ./Results WebTesting
 ```
-Onde, -d é o parâmetro que indica que os resultados da execução (log/output/report) das suítes contidas no diretório (Testes) devem ser armazenados em um diretório específico, que no exemplo é uma pasta de nível acima (./), chamada (MeusResultados).
+Onde, -d é o parâmetro que indica que os resultados da execução (log/output/report) das suítes contidas no diretório (WebTesting) devem ser armazenados em um diretório específico, que no exemplo é uma pasta de nível acima (./), chamada Results.
 
 ### Executar apenas um teste específico da suíte:
 ```
-robot -d ./MeusResultados -t “Cenário 01: Executar um vídeo no Youtube” WebTesting
+robot -d ./Results -t “Cenário 01: Executar um vídeo no Youtube” WebTesting
 ```
-Onde, -t é o parâmetro que indica que deve ser executado o(s) teste(s) específico(s) chamado(s) (“Cenário 01: Pesquisar postagem Season Premiere”) das suítes contidas no diretório (Testes). OBS.: Se existirem testes em diferentes suítes, mas com esse mesmo nome, todos serão executados.
+Onde, -t é o parâmetro que indica que deve ser executado o(s) teste(s) específico(s) chamado(s) (“Cenário 01: Executar um vídeo no Youtube”) das suítes contidas no diretório (WebTesting). OBS.: Se existirem testes em diferentes suítes, mas com esse mesmo nome, todos serão executados.
 
