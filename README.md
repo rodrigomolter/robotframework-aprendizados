@@ -42,11 +42,11 @@ robot youtube.robot
 ```
 
 ### Executando em um navegador diferente
-O navegador utilizado é controlado pela variável ${BROWSER}.
+O navegador utilizado é controlado pela variável `${BROWSER}`.
 ```
 robot BROWSER:chrome youtube.robot
 ```
-Onde, -v é o parâmetro que indica que será atribuído o valor (chrome) à variável (${BROWSER}) do meu teste. No meu exemplo, a variável está definida como default o valor firefox, mas rodando por este comando, o navegador utilizado será o chrome.
+Onde, -v é o parâmetro que indica que será atribuído o valor `chrome` à variável `${BROWSER}` do meu teste. No meu exemplo, a variável está definida como default o valor firefox, mas rodando por este comando, o navegador utilizado será o chrome.
 
 ###  Especificar o diretório dos results da execução
 ```
