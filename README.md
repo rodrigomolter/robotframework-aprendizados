@@ -24,7 +24,8 @@ As suites de testes estão rodando por padrão através do Firefox, para isso é
 [Geckodriver (Firefox)](https://github.com/mozilla/geckodriver/releases/latest)
 
 [ChromeDriver (Google Chrome)](https://chromedriver.chromium.org/downloads)
-`Atenção: baixe a versão de acordo com o seu Chrome. Para saber a sua versão basta ir em Ajuda>Sobre o Google Chrome`
+> [!NOTE]
+> Atenção: baixe a versão de acordo com o seu Chrome. Para saber a sua versão basta ir em Ajuda>Sobre o Google Chrome.
 
 Agora é necessário adicionar o webdriver dentro da pasta de `scripts` do Python.
 Geralmente ela fica em `C:\Users\User\AppData\Local\Programs\Python\Python39\Scripts` ou você pode conferir através das suas variaveis de ambiente.
